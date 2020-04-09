@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{%block body %}
+
+{% if in_task %}
+    {% include 'delete_button.html' %}
+
+    <form id="btn_assign" action="/task/{{ task_id }}/add_user">
+        <button type="submit">Add user to the task</button>
+    </form>
+
+    {% for user_in_task in list %}
+
+    <h2 id="user_list_in_task">
+        <a id="{{ user_in_task[0] }}" href="/user/{{ user_in_task[0] }}">{{ user_in_task[1] }}</a>
+        <form action="/{{ task_id }}/unassign/{{ user_in_task[0] }} "><button type="submit">unassign</button>
+      </form>
+    </h2>
+
+    {% endfor %}
+
+{% endif %}
+
+{% if not in_task %}
+
+<form id="add_user_btn" action="/user/add_user">
+    <button type="submit">Add user</button>
+</form>
+
+{% for user in list %}
+
+<h2 id="user_list">
+<a id="{{ user[0] }}" href="/user/{{ user[0] }}">{{ user[1] }}</a>
+</h2>
+
+{% endfor %}
+
+{% endif %}
+
+
+{% endblock %}

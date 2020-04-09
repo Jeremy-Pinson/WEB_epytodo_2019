@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{%block body %}
+
+
+<form id="user_list" method="post" action="">
+{% for user in list %}
+
+    <button name="button_add_asign" value="{{ user[0] }}" type="submit">Add {{ user[1] }} to task {{taskname}}</button>
+
+{% endfor %}
+
+</form>
+
+{% endblock %}

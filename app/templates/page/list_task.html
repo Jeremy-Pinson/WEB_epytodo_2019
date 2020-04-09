@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{%block body %}
+
+{% if delete %}
+    {% include 'delete_button.html' %}
+{% endif %}
+
+{% if not delete %}
+
+<form id="add_task_btn" action="/task/add_task">
+    <button type="submit">Add task</button>
+</form>
+
+{% endif %}
+
+{% for task in list %}
+
+<h2 id="one_task">
+
+<form action="/task/{{ task[0] }}/status">
+    <a id="{{ task[0] }}" href="/task/{{ task[0] }}">{{ task[1] }}</a>
+    <a> : </a>
+    <button id="statu_task">{{  task[4]  }}</button>
+</form>
+</h2>
+
+
+{% endfor %}
+
+{% endblock %}
