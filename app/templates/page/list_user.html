@@ -30,7 +30,10 @@
 {% for user in list %}
 
 <h2 id="user_list">
+
+<form>
 <a id="{{ user[0] }}" href="/user/{{ user[0] }}">{{ user[1] }}</a>
+</form>
 </h2>
 
 {% endfor %}

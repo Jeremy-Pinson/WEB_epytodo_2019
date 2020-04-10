@@ -38,3 +38,27 @@ ul li a {
 ul li a:hover {
 	color: #6495ED;
 }
+
+h1 {
+	padding-left: 5%;
+	padding-top: 2%;
+	padding-bottom:2%;
+}
+
+h2 {
+	padding-left: 10%;
+	padding-bottom: 5px;
+}
+
+form a {
+	text-decoration: none;
+	font-family: arial;
+	color: #FFF;
+	text-shadow: #6495ED 1px 1px, #6495ED -1px 1px, #6495ED -1px -1px, #6495ED 1px -1px;
+}
+
+form a:hover {
+	color: #6495ED;
+	text-shadow: #000 1px 1px, #000 -1px 1px, #000 -1px -1px, #000 1px -1px;
+}
+}
