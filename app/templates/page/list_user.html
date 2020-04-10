@@ -10,11 +10,12 @@
     </form>
 
     {% for user_in_task in list %}
-
-    <h2 id="user_list_in_task">
-        <a id="{{ user_in_task[0] }}" href="/user/{{ user_in_task[0] }}">{{ user_in_task[1] }}</a>
-        <form action="/{{ task_id }}/unassign/{{ user_in_task[0] }} "><button type="submit">unassign</button>
-      </form>
+    <h2>
+    <form action="/{{ task_id }}/unassign/{{ user_in_task[0] }}">
+    <a id="{{ user_in_task[0] }}" href="/user/{{ user_in_task[0] }}">{{ user_in_task[1] }}</a>
+    <a> : </a>
+    <button button type="submit">unassign</button>
+    </form>
     </h2>
 
     {% endfor %}
